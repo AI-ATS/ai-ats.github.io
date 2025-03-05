@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Chatbot Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ATS Chatbot Demo</h1>
+        </header>
+        <main>
+            <section class="content">
+                <h2>Welcome to the ATS Chatbot Demo</h2>
+                <p>This is a demonstration of a chatbot interface that connects to a FastAPI backend.</p>
+                <p>Click on the chat bubble in the bottom right corner to start a conversation.</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 ATS Chatbot</p>
+        </footer>
+    </div>
+
+    <!-- Chat Bubble -->
+    <div class="chat-bubble" id="chatBubble">
+        <div class="bubble-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Chat Window -->
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <h3>ATS Chatbot</h3>
+            <button class="close-btn" id="closeChat">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <div class="message-content">Hello! I'm the ATS Chatbot. How can I help you today?</div>
+            </div>
+        </div>
+        <div class="login-form" id="loginForm">
+            <h4>Please login to continue</h4>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div>
+            <button id="loginBtn">Login</button>
+            <div class="login-error" id="loginError"></div>
+        </div>
+        <div class="chat-input" id="chatInput" style="display: none;">
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button id="sendMessage">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
