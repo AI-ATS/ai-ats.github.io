@@ -13,7 +13,7 @@ const sendMessage = document.getElementById('sendMessage');
 const loginError = document.getElementById('loginError');
 
 // API Configuration
-const API_BASE_URL = 'https://ats-chatbot-rajgoaj.replit.app/; // Change this to your API URL
+const API_BASE_URL = 'https://ats-chatbot-rajgoaj.replit.app/'; // Change this to your API URL
 let authToken = null;
 
 // Event Listeners
